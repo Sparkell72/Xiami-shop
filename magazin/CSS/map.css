@@ -1,0 +1,169 @@
+body{
+
+    font-family: "Andika", sans-serif;
+    height: 100%;
+    padding: 50 20px;
+    margin:0;
+    
+}
+
+
+
+.logohead{
+   
+   margin-left: 350px;
+
+
+}
+
+
+.nav{
+    color:black;
+    width: 539px;
+    margin-left: 700px;
+    margin-top: -55px;
+    word-spacing: 35px;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+.nav-item{
+    text-decoration: none;
+    color: black;
+}
+
+.registracia{
+   margin-left: 1150px;
+   margin-top: -55px;
+}
+
+.vxod {
+    margin-left: 1370px;
+   margin-top: -55px;
+
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;
+    position: absolute;
+}
+
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: black;
+    color:white;
+    
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+    
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.text-title{
+    margin-top: 200px;
+    margin-left: 200px;
+    font-size: 20px;
+    
+}
+
+.line{
+    margin-top: 200px;
+    margin-left: -350px;
+    
+}
+.karta{
+    margin-top: 150px;
+   
+    
+    display: flex;
+    justify-content: space-evenly;
+}
+.text-title{
+    margin-left: -200px;
+    margin-top: 100px;
+}
+.down-resister{
+    margin-top: 200px;
+    font-size: 10px;
+    display: flex;
+    width: 50%;
+    margin-top: 50px;
+    font-weight: 100;
+    margin-left: 200px;
+    font-family: "Andika", sans-serif;
+   
+}
+.registracia-down{
+    font-size: 10px;
+    margin-left: 100px;
+    font-family: "Andika", sans-serif;
+
+
+    
+}
+.line{
+    margin-top: 200px;
+    margin-left: -350px;
+    
+}
+.haeder-down{
+    font-family: "Andika", sans-serif;
+}
+.line{
+    margin-top:100px;
+}
+.haeder-down{
+    margin-left: 1500px;
+    margin-top: -150px;
+}
