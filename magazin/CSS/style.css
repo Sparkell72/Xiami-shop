@@ -29,6 +29,7 @@ body{
 .nav-item{
     text-decoration: none;
     color: black;
+
 }
 
 .registracia{
@@ -146,13 +147,7 @@ body{
     justify-content: space-between;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    width: 1200px;
-    margin: 0 auto;
     
-}
-.card{
-    margin-bottom: 50px;
 }
 .wrapper .card{
     position: relative;
@@ -162,7 +157,11 @@ body{
     overflow: hidden;
     background-color: #fff;
 }
-
+.wrapper .card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .card .content .row
 .content .buttons{
     
@@ -180,8 +179,7 @@ body{
 
 }
 .wrapper .card .content{
-    width: 320px;
-    height: 217px;
+    
     position: absolute;
     padding: 10px 20px 22px 20px;
     background-color: #fff;
@@ -260,7 +258,6 @@ body{
     box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.15);
     
 }
-
 .cart-nav .icon i{
     font-size: 20px;
 }
@@ -276,17 +273,23 @@ body{
     color: #fff;
     text-align: center;
     line-height: 24px;
+    
 }
 .cart-nav .icon{
     color: black;
 }
 
 .features-block {
+    
     position: relative;
     margin-top: 70px;
     font-size: 10px;
+    margin-left: 150px;
+    display: block;
     box-sizing: border-box;
-width: 1000px;
+    span {
+      float: left;
+    }
   }
   *,
 *::before,
@@ -303,7 +306,7 @@ img {
 
 .image {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-top: 25px;
   font-size: 12px;
   
@@ -408,46 +411,5 @@ img {
     margin-top:200px;
 }
 
-/* basket */
-.basket{
-    width: 1200px;
-    background-color: #fff;
-    text-align: left;
-    padding-left: 65px;
-    margin: 0 auto;
-}
-.br{
-    border-radius: 15px;
-    border: 2px solid black;
-    margin-top: 100px;
-    width: 1300px;
-    margin: 0 auto;
-}
-.order_form{
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    width: 400px;
-    margin-top:50px ;
-    margin-bottom: 100px;
-}
-.order_button{
-    background-color: black;
-    color: #FFF;
-    border-radius: 10px;
-    height: 50px;
-}
-.backet_img{
-    margin-bottom: 10px;
-}
-.font15{
-    font-size: 25px;
-}
-.title11{
-    margin-bottom: 30px;
-    font-size: 50px;
-    line-height: 60px;
-    letter-spacing: 0.5px;
-    text-align: center;
-    margin-top: 150px;
-}
+
+   

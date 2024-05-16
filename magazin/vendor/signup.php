@@ -11,11 +11,11 @@
     mysqli_query($connect, "INSERT INTO  `persons`( `id`, `name` , `email` , `password`) VALUES (NULL, '$name', '$email','$password')");
 
     $_SESSION['message'] = 'Регистрация прошла успешно!';
-    header('Location: ../pages/vxod.php');
+    header('Location: ../pages/tovar.php');
 
 
     } else {
         $_SESSION ['message'] = 'Пароли не совпадают';
-        header('Location: ../pages/registracia.php');
+        header('Location: ../index.php');
     }
 ?>

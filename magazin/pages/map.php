@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<?php
-    session_start();?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,41 +27,30 @@
    
 </head>
 <body>
-<div class="Header">
+        <div class="Header">
             
             <div class='logohead'>
-                <a href="../index.php">
+                <a href="..//index.php">
                 <img src="../image/logo.png"/>
                 </a>
             </div>
             
             <div class='nav'>
                 
-                <a class = 'nav-item' href="./map.php">АДРЕС</a>
+                <a class = 'nav-item' href="file:///C:/Users/sparkel/Desktop/magazin/main/Absolut.html">АДРЕС</a>
                 <a class = 'nav-item' href="#"></a>ЦЕНЫ</a>
                 <a class = 'nav-item' href="@"></a>ТОВАРЫ</a>
-                <a class = 'nav-item' href="./pages/map.php"></a>ОТЗЫВЫ</a>
+                <a class = 'nav-item' href="file:///C:/Users/sparkel/Desktop/magazin/main/Absolut.html"></a>ОТЗЫВЫ</a>
         
             </div>
-            <?php if(isset($_SESSION['user'])){?>
-                <div class="registracia">
-                <a href="../vendor/logout.php" class="btn btn-white btn-animate">Выйти</a>
-            </div>
-            <div class="vxod">
-                <a href="./korzuna.php" class="btn btn-white btn-animate">Корзина</a>
-            </div>
-        <?php }else{?>
+        
             <div class="registracia">
-                <a href="./registracia.php" class="btn btn-white btn-animate">Регистрация</a>
+                <a href="../pages/registracia.php" class="btn btn-white btn-animate">Регистрация</a>
             </div>
             <div class="vxod">
-                <a href="./vxod.php" class="btn btn-white btn-animate">Войти</a>
+                <a href="../pages/vxod.php" class="btn btn-white btn-animate">Войти</a>
             </div>
-        
-        <?php }?>
-           
-
-            </div>   
+        </div>
         <div class="karta">
             <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/org/xiaomi/144022446354/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Xiaomi</a><a href="https://yandex.ru/maps/213/moscow/category/electronics_store/184107835/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Магазин электроники в Москве</a><a href="https://yandex.ru/maps/213/moscow/category/items_for_mobile_phones/52984923455/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:28px;">Товары для мобильных телефонов в Москве</a><iframe src="https://yandex.ru/map-widget/v1/?ll=37.639697%2C55.730658&mode=search&oid=144022446354&ol=biz&sll=37.639981%2C55.730578&sspn=0.007920%2C0.002592&text=Xiaomi&z=15.96" width="700" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
             <div class="text-title">

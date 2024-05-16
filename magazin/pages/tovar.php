@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<?php
-    session_start();?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,52 +18,34 @@
     
 </head>
 <body>
-    <?php   
-    require_once '../vendor/connect.php';
-
-    $id = $_GET['id'];
-    $prod = "SELECT * FROM product WHERE id = '$id'";
-    $query = $connect->query($prod);
-    $row = $query->fetch_assoc();
-    ?>
     <div class="Header">
             
-            <div class='logohead'>
-                <a href="../index.php">
+        <div class='logohead'> 
+            <a href="../index.php">
                 <img src="../image/logo.png"/>
-                </a>
-            </div>
+            </a>
+        </div>
+        
+        <div class='nav'>
             
-            <div class='nav'>
-                
-                <a class = 'nav-item' href="./map.php">АДРЕС</a>
-                <a class = 'nav-item' href="#"></a>ЦЕНЫ</a>
-                <a class = 'nav-item' href="@"></a>ТОВАРЫ</a>
-                <a class = 'nav-item' href="map.php"></a>ОТЗЫВЫ</a>
+            <a class = 'nav-item' href="@"></a>АДРЕС</a>
+            <a class = 'nav-item' href="@"></a>ЦЕНЫ</a>
+            <a class = 'nav-item' href="@"></a>ТОВАР</a>
+            <a class = 'nav-item' href="@"></a>ОТЗЫВЫ</a>
+    
+        </div>
         
-            </div>
-            <?php if(isset($_SESSION['user'])){?>
-                <div class="registracia">
-                <a href="../vendor/logout.php" class="btn btn-white btn-animate">Выйти</a>
-            </div>
-            <div class="vxod">
-                <a href="./korzuna.php" class="btn btn-white btn-animate">Корзина</a>
-            </div>
-        <?php }else{?>
-            <div class="registracia">
-                <a href="./registracia.php" class="btn btn-white btn-animate">Регистрация</a>
-            </div>
-            <div class="vxod">
-                <a href="./vxod.php" class="btn btn-white btn-animate">Войти</a>
-            </div>
-        
-        <?php }?>
-           
-
-            </div>   
+        <div class="registracia">
+            <a href="#" class="btn btn-white btn-animate">Регистрация</a>
+        </div>
+        <div class="vxod">
+            <a href="#" class="btn btn-white btn-animate">Войти</a>
+    
+        </div>
+    </div>
     <div class="tovar">
         <div class="name-tovar">
-            <h1><?php echo $row['name']?></h1>
+            <h1>Электросамокат Xiaomi Mi Electric Scooter Essential</h1>
             
         </div>
         <style>
@@ -154,17 +134,17 @@
           <div class="slideshow-container">
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div>
-              <img src="../image/<?php echo $row['imgfale']?>" style="width:100%">
+              <img src="https://mi-shop.com/upload/iblock/3d4/3d49ee458ad11d397ef191e39a4f0b57.w500.webp" style="width:100%">
               
             </div>
             <div class="mySlides fade">
               <div class="numbertext">2 / 3</div>
-              <img src="../image/<?php echo $row['img2']?>" style="width:100%">
+              <img src="https://mi-shop.com/upload/iblock/f92/f921c3212be24c1953c2b936efa5be4f.w500.webp" style="width:100%">
               
             </div>
             <div class="mySlides fade">
               <div class="numbertext">3 / 3</div>
-              <img src="../image/<?php echo $row['img3']?>" style="width:100%">
+              <img src="https://mi-shop.com/upload/iblock/0b6/0b68def0bd40cfa6bb1395d466b40b68.w500.webp" style="width:100%">
               
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -208,7 +188,11 @@
           
             <div class="xarakter">
                 
-              <?php echo $row['about']?>
+                <p>Емкость аккумулятора (мА*ч): 5100 мАч</p>
+                <p>Степень защиты: IP54</p>
+                <p>Материал: Алюминий</p>
+                <p>Управление: Через приложение Mi Home</p>
+                <p>Вес (г): 12000</p>
                 <div class="xarakter-photo">
                     <picture>
                         <img src="https://static.insales-cdn.com/files/1/7974/3825446/original/rst_1_.jpg"width="40" height="40" alt="">
@@ -219,10 +203,10 @@
                 </div>
             </div> 
             <div class="sell">
-                <div class="text-sell"><?php echo $row['price']?> руб</div>
+                <div class="text-sell">22 990₽</div>
                 
                 <div class="Buy">
-                    <a href="../vendor/basket.php?id=<?php echo $row['id'] ?>" class="btn btn-white btn-animate">Купить</a>
+                    <a href="#" class="btn btn-white btn-animate">Купить</a>
                 </div>
                 <div class="sell-photo">
                     <img src="https://mi-shop.com/f/i/yandex-split.svg"width="200" height="200">

@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<?php
-    session_start();?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,11 +25,11 @@
    
 </head>
 <body>
-<div class="Header">
+        <div class="Header">
             
             <div class='logohead'>
-                <a href="../index.php">
-                <img src="../image/logo.png"/>
+                <a href="./index.php">
+                <img src="./image/logo.png"/>
                 </a>
             </div>
             
@@ -43,25 +41,14 @@
                 <a class = 'nav-item' href="./pages/map.php"></a>ОТЗЫВЫ</a>
         
             </div>
-            <?php if(isset($_SESSION['user'])){?>
-                <div class="registracia">
-                <a href="../vendor/logout.php" class="btn btn-white btn-animate">Выйти</a>
-            </div>
-            <div class="vxod">
-                <a href="./pages/korzuna.php" class="btn btn-white btn-animate">Корзина</a>
-            </div>
-        <?php }else{?>
+            
             <div class="registracia">
                 <a href="./pages/registracia.php" class="btn btn-white btn-animate">Регистрация</a>
             </div>
             <div class="vxod">
                 <a href="./pages/vxod.php" class="btn btn-white btn-animate">Войти</a>
             </div>
-        
-        <?php }?>
-           
 
-            </div>   
                 
                 </div>
                 <div class="photo1">
@@ -79,9 +66,15 @@
                 
             </div>    
         </div>
-        
+            
             <div class="wrapper">
-               
+                <div class="cart-nav">
+                    <div class="icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span>Корзина</span>
+                    </div>
+                    <div class="item-count">0</div>
+                </div>
                 <?php
                     require_once ('./vendor/connect.php');
                   $qeri = "SELECT * FROM `product`";
@@ -89,7 +82,7 @@
                     
                     while($row = mysqli_fetch_assoc($result)):?>
                             <div class="card">
-                        <img width="320" height="340" src=".//image/<?php echo $row ['imgfale']?>" alt="Xiaomi Mi Electric Scooter Essential">
+                        <img src=".//image/<?php echo $row ['imgfale']?>" alt="Xiaomi Mi Electric Scooter Essential">
                         <div class="content">
                             <div class="row">
                                 <div class="details">
@@ -100,22 +93,18 @@
                                             
                                     <p><?php echo $row['manefacter'] ?></p>
                                 </div>
-                                <div class="price"><?php echo $row['price'] ?> руб</div>
+                                <div class="price"><?php echo $row['price'] ?></div>
                             </div>
                             <div class="buttons">
-                                <button> <a href="./pages/tovar.php?id=<?php echo $row['id'] ?>">Купить в 1 клик</a></button>
-                                <button class="cart-btn"><a href="./vendor/basket.php?id=<?php echo $row['id'] ?>">В корзину</a></button> 
+                                <button> <a href="./pages/tovar.php">Купить в 1 клик</a></button>
+                                <button class="cart-btn">В корзину</button> 
                             </div>
                         </div>
                     </div>
 <?php endwhile; ?>       
-                         <!-- <div  class="cart-nav">
-                    <div class="icon">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>Корзина</span>
-                    </div>
-                    <div class="item-count">0</div>
-                </div> -->
+
+
+                        
 
                 <!-- <div class="card">
                     <img src="https://mi-shop.com/upload/iblock/278/27854e7779fb15d3a9164d9657d5a326.webp" alt="Xiaomi Mi Electric Scooter Essential">
@@ -164,30 +153,13 @@
                             <button class="cart-btn">В корзину</button>
                         </div>
                     </div>
-                </div>
+                </div>  
             </div> -->
-            <div class="features-block">
-                <div class="image">
-                  <span>
-                      <picture>
-                          <img src="https://static.ru-mi.com/upload/iblock/013/emcdajg48opqhyz2ex36u3h7rn24jzgi.png" alt="">
-                      </picture>
-                      <h1>860 Пунктов самовывоза</h1>
-                      </span>
-                  <span>
-                      <picture>
-                          <img src="https://static.ru-mi.com/upload/iblock/08f/6358bbeaf371c6zb86nhmyw23lt5wyk8.png" alt="">
-                      </picture>
-                      <h1>Бесплатная доставка</h1>
-                      </span>
-                  <span>
-                      <picture>
-                          <img src="https://static.ru-mi.com/upload/iblock/541/w36ub3j0g9jbqfgr2149ejtomh4ue1b4.png" alt="">
-                      </picture>
-                      <h1>Официальные поставщики</h1>
-                      </span>
-                      
-                </div>
+
+            
+
+            
+      
               </div>
               <div class="line"></div>
             </div>
@@ -219,6 +191,15 @@
                             </div>
                         
                             
+                  
+           
+
+                
+                  
+            
+       
+            
+            
         <script src="./JS/script.js"></script>
     </div>    
 

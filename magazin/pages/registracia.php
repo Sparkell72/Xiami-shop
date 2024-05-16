@@ -28,13 +28,13 @@
                         <input type="text" name="name" placeholder="Имя">
                     </div>
                     <div class="form-field">
-                        <input type="email" name="email" placeholder="Email">
+                        <input type="text" name="email" placeholder="Email">
                     </div>
                     <div class="form-field">
-                        <input type="password" name="password" placeholder="Пароль">
+                        <input type="text" name="password" placeholder="Пароль">
                     </div>
                     <div class="form-field">
-                        <input type="password" name="password_confirm" placeholder="Подтвердите Пароль">
+                        <input type="text" name="password_confirm" placeholder="Подтвердите Пароль">
                     </div>
         
                 </div>
@@ -51,7 +51,7 @@
         ?>
                  
                     <p>
-            У вас уже есть аккаунт? - <a href="./vxod.php">авторизируйтесь</a>!
+            У вас уже есть аккаунт? - <a href="../pages/vxod.php">авторизируйтесь</a>!
         </p>
             </div>
             

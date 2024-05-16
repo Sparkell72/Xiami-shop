@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<?php  session_start();?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,20 +14,13 @@
     <main>
         <div class="circle"> </div>
         <div class="register-form-container">
-            <h1 class="form-title"> Авторизация</h1>
-            <?php
-            if ($_SESSION['message']) {
-                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
-            }
-            unset($_SESSION['message']);
-        ?> 
-            <form method="post" action="../vendor/sing.php">
+            <h1 class="form-title"> Авторизация</h1> 
             <div class="form-fields">
                 <div class="form-field">
-                    <input type="email" name="email" placeholder="Email">
+                    <input type="text" placeholder="Email">
                 </div>
                 <div class="form-field">
-                    <input type="password" name="password" placeholder="Пароль">
+                    <input type="text" placeholder="Пароль">
                 </div>
                
     
@@ -36,7 +28,7 @@
             <div class="form_butons">
             <button type="submit" class="button button-google">Авторизоваться</button>
             </div> 
-   </form>
+   
         </div>
         
         </main>
